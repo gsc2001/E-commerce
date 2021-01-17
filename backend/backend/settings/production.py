@@ -6,6 +6,7 @@ from .base import *
 SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = False
 ALLOWED_HOSTS = ["*"]
+AUTH_USER_MODEL = "ecommerce.User"
 
 
 # White Noise configuration - http://whitenoise.evans.io/en/stable/django.html
@@ -24,4 +25,3 @@ STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 django_heroku.settings(locals())
 STATIC_URL = "/static/"
 WHITENOISE_ROOT = os.path.join(BASE_DIR, "../", "frontend", "build", "root")
-
